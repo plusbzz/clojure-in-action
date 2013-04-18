@@ -45,4 +45,16 @@
 ; Java string ops
 (.split "hello world" " ")
 
-; ISeq interface
+; vector
+
+(def v (vector 10 20 30 40))
+(println (get v 2))
+(println (v 2))
+
+; map
+
+(def m {:a 1 :b 2 :c 3})
+(println (m :b))
+
+
+
