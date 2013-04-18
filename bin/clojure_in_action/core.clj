@@ -1,0 +1,32 @@
+(ns clojure-in-action.core)
+
+(defn foo
+  "I don't do a whole lot."
+  [x]
+  (println x "Hello, World!"))
+
+(defn my-add [op1 op2] (+ op1 op2))
+(my-add 1 2)
+
+(defn cmp [op1 op2]
+  (cond
+    (> op1 op2) (println "greater")
+    (< op1 op2) (println "lesser")
+    :default (println "equal")))
+(cmp 2 1)
+    
+(let [quoted-list '(add 1 2 3)]
+  quoted-list)
+
+(when (> 1 0)
+  (println "hello")
+  (println "world"))
+
+(defn fact [n]
+  (loop [current n 
+         val 1]
+    (if (= current 1)
+      val
+      (recur (dec current) (* val current)))))
+(println (fact 10))
+
